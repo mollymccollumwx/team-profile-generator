@@ -38,6 +38,8 @@ const questions = [
 // asks specific questions based on what the user choices for role?
 // not doing anything to the renderHTML?
 // explain the output path/DIR
+//series of functions (if/else embedded)
+//are you done? array of employees that passes into the render function -- renders the HTML page
 
 //
 
