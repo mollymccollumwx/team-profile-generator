@@ -15,10 +15,31 @@ const questions = [
     {
         type: "input",
         message: "What is the employee's name?",
-        name: "name",
+        name: "name"
+    },
+    {
+        type: "input",
+        message: "What is the employee's ID?",
+        name: "id"
+    },
+    {
+        type: "input",
+        message: "Please enter the employee's email address?",
+        name: "email"
+    },
+    {
+        type: "list",
+        message: "What is the employee's ID?",
+        choices: ["Engineer", "Manager", "Intern"],
+        name: "role"
     },
 
 ]
+// asks specific questions based on what the user choices for role?
+// not doing anything to the renderHTML?
+// explain the output path/DIR
+
+//
 
 // uses the inquirer package to prompt with questions
 function init(){
