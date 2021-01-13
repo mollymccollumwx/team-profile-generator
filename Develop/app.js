@@ -11,37 +11,11 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 const { create } = require("domain");
+const { defaultCipherList } = require("constants");
 
 //array to store employee information from user input
 let employees = [];
 
-
-// array of questions for user input
-// function createTeam() {}
-// const questions = [
-//     {
-//         type: "input",
-//         message: "What is the employee's name?",
-//         name: "name"
-//     },
-//     {
-//         type: "input",
-//         message: "What is the employee's ID?",
-//         name: "id"
-//     },
-//     {
-//         type: "input",
-//         message: "Please enter the employee's email address?",
-//         name: "email"
-//     },
-//     {
-//         type: "list",
-//         message: "What is the employee's ID?",
-//         choices: ["Engineer", "Manager", "Intern"],
-//         name: "role"
-//     },
-
-// ]
 
 function employeeRole() {
   inquirer
