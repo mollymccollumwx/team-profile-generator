@@ -10,12 +10,17 @@ class Employee {
         return this.name;
     }
 
-    getID(){}
+    getId(){
+        return this.id;
+    }
 
-    getEmail(){}
+    getEmail(){
+        return this.email;
+    }
 
     getRole(){
         //returns employee
+        return 'Employee';
     }
 }
 
