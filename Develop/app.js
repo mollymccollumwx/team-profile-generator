@@ -12,6 +12,10 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 const { create } = require("domain");
 
+//array to store employee information from user input
+let employees = [];
+
+
 // array of questions for user input
 // function createTeam() {}
 // const questions = [
