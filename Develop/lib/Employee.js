@@ -7,7 +7,7 @@ class Employee {
     }
 
     getName(){
-
+        return this.name;
     }
 
     getID(){}
@@ -18,3 +18,5 @@ class Employee {
         //returns employee
     }
 }
+
+module.exports = Employee;
