@@ -35,8 +35,20 @@ function employeeRole() {
         } else if(response.role === "Intern"){
           createIntern();
         } else {
-          const renderEmployees = render(employees);
-          fs.writeFileSync(outputPath, renderEmployees, 'utf-8');
+          if (fs.existsSync("./output")) {
+            const renderEmployees = render(employees);
+            fs.writeFileSync(outputPath, renderEmployees, 'utf-8'); 
+          } else {
+            fs.mkdir("./output", function (err) {
+              if (err) {
+                throw err;
+              } else {
+                console.log("New output directory has been successfully created!");
+                const renderEmployees = render(employees);
+                fs.writeFileSync(outputPath, renderEmployees, 'utf-8'); 
+              }
+            })
+          }
         }
 
     
