@@ -54,10 +54,13 @@ function employeeRole() {
       },
     ])
     .then((response) => {
-      if (response.role === "Engineer") {
-        createEngineer();
-      } else {
-        console.log("End");
+      switch (response.role){
+        case 'Engineer':
+          createEngineer();
+        case 'Manager':
+          createManager();
+        case 'Intern':
+          createIntern();
       }
     });
 }
