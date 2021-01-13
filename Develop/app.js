@@ -32,6 +32,8 @@ function employeeRole() {
           createEngineer()
         } else if(response.role === "Manager"){
           createManager();
+        } else if(response.role === "Intern"){
+          createIntern();
         } else {
           const renderEmployees = render(employees);
           fs.writeFileSync(outputPath, renderEmployees, 'utf-8');
@@ -82,7 +84,6 @@ function createEngineer() {
     .then((response) => {
       const engineer = new Engineer(response.name, response.id, response.email, response.github);
       employees.push(engineer);
-      console.log(employees);
       employeeRole();
     });
 }
@@ -114,7 +115,37 @@ function createManager() {
     .then((response) => {
       const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
       employees.push(manager);
-      console.log(employees);
+      employeeRole();
+    });
+}
+
+function createIntern() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "What is the employee's name?",
+        name: "name",
+      },
+      {
+        type: "input",
+        message: "What is the employee's ID?",
+        name: "id",
+      },
+      {
+        type: "input",
+        message: "Please enter the employee's email address?",
+        name: "email",
+      },
+      {
+        type: "input",
+        message: "What is the name of the employee's school?",
+        name: "school",
+      },
+    ])
+    .then((response) => {
+      const intern = new Intern(response.name, response.id, response.email, response.school);
+      employees.push(intern);
       employeeRole();
     });
 }
