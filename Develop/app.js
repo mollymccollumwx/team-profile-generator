@@ -40,46 +40,48 @@ const { create } = require("domain");
 // ]
 
 function employeeRole() {
-    inquirer.prompt([
-            {
-                type: "list",
-                message: "What is the employee's ID?",
-                choices: ["Engineer", "Manager", "Intern"],
-                name: "role"
-            }
-    ]).then(response => {
-
-        if(response.role === 'Engineer') {
-            createEngineer();
-        }else {
-            console.log("End")
-        }
-    })
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        message: "What is the employee's role?",
+        choices: ["Engineer", "Manager", "Intern"],
+        name: "role",
+      },
+    ])
+    .then((response) => {
+      if (response.role === "Engineer") {
+        createEngineer();
+      } else {
+        console.log("End");
+      }
+    });
 }
 
 employeeRole();
 
 function createEngineer() {
-    inquirer.prompt([
-        {
-                    type: "input",
-                    message: "What is the employee's name?",
-                    name: "name"
-                },
-                {
-                    type: "input",
-                    message: "What is the employee's ID?",
-                    name: "id"
-                },
-                {
-                    type: "input",
-                    message: "Please enter the employee's email address?",
-                    name: "email"
-                },
-
-    ]).then(response => {
-        console.log(response);
-    })
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "What is the employee's name?",
+        name: "name",
+      },
+      {
+        type: "input",
+        message: "What is the employee's ID?",
+        name: "id",
+      },
+      {
+        type: "input",
+        message: "Please enter the employee's email address?",
+        name: "email",
+      },
+    ])
+    .then((response) => {
+      console.log(response);
+    });
 }
 // asks specific questions based on what the user choices for role?
 //series of functions (if/else embedded)
