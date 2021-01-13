@@ -9,48 +9,81 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const { create } = require("domain");
 
-//array of questions for user input
-const questions = [
-    {
-        type: "input",
-        message: "What is the employee's name?",
-        name: "name"
-    },
-    {
-        type: "input",
-        message: "What is the employee's ID?",
-        name: "id"
-    },
-    {
-        type: "input",
-        message: "Please enter the employee's email address?",
-        name: "email"
-    },
-    {
-        type: "list",
-        message: "What is the employee's ID?",
-        choices: ["Engineer", "Manager", "Intern"],
-        name: "role"
-    },
+// array of questions for user input
+// function createTeam() {}
+// const questions = [
+//     {
+//         type: "input",
+//         message: "What is the employee's name?",
+//         name: "name"
+//     },
+//     {
+//         type: "input",
+//         message: "What is the employee's ID?",
+//         name: "id"
+//     },
+//     {
+//         type: "input",
+//         message: "Please enter the employee's email address?",
+//         name: "email"
+//     },
+//     {
+//         type: "list",
+//         message: "What is the employee's ID?",
+//         choices: ["Engineer", "Manager", "Intern"],
+//         name: "role"
+//     },
 
-]
-// asks specific questions based on what the user choices for role?
-// not doing anything to the renderHTML?
-// explain the output path/DIR
-//series of functions (if/else embedded)
-//are you done? array of employees that passes into the render function -- renders the HTML page
+// ]
 
-//
-
-// uses the inquirer package to prompt with questions
-function init(){
-    inquirer.prompt(questions).then((response) => {
+function createEmployee() {
+    inquirer.prompt([
+        
+            {
+                type: "input",
+                message: "What is the employee's name?",
+                name: "name"
+            },
+            {
+                type: "input",
+                message: "What is the employee's ID?",
+                name: "id"
+            },
+            {
+                type: "input",
+                message: "Please enter the employee's email address?",
+                name: "email"
+            },
+            {
+                type: "list",
+                message: "What is the employee's ID?",
+                choices: ["Engineer", "Manager", "Intern"],
+                name: "role"
+            }
+    ]).then((response) => {
         console.log(response);
     })
 }
 
-init();
+createEmployee();
+// asks specific questions based on what the user choices for role?
+//series of functions (if/else embedded)
+//are you done? array of employees that passes into the render function -- renders the HTML page
+//.then call another function that is defined elsewhere
+//
+
+//
+
+// uses the inquirer package to prompt with questions
+// function init(){
+//     inquirer.prompt(questions).then((response) => {
+//         console.log(response);
+//     })
+// }
+
+// init();
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
