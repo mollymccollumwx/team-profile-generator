@@ -39,36 +39,48 @@ const { create } = require("domain");
 
 // ]
 
-function createEmployee() {
+function employeeRole() {
     inquirer.prompt([
-        
-            {
-                type: "input",
-                message: "What is the employee's name?",
-                name: "name"
-            },
-            {
-                type: "input",
-                message: "What is the employee's ID?",
-                name: "id"
-            },
-            {
-                type: "input",
-                message: "Please enter the employee's email address?",
-                name: "email"
-            },
             {
                 type: "list",
                 message: "What is the employee's ID?",
                 choices: ["Engineer", "Manager", "Intern"],
                 name: "role"
             }
-    ]).then((response) => {
-        console.log(response);
+    ]).then(response => {
+
+        if(response.role === 'Engineer') {
+            createEngineer();
+        }else {
+            console.log("End")
+        }
     })
 }
 
-createEmployee();
+employeeRole();
+
+function createEngineer() {
+    inquirer.prompt([
+        {
+                    type: "input",
+                    message: "What is the employee's name?",
+                    name: "name"
+                },
+                {
+                    type: "input",
+                    message: "What is the employee's ID?",
+                    name: "id"
+                },
+                {
+                    type: "input",
+                    message: "Please enter the employee's email address?",
+                    name: "email"
+                },
+
+    ]).then(response => {
+        console.log(response);
+    })
+}
 // asks specific questions based on what the user choices for role?
 //series of functions (if/else embedded)
 //are you done? array of employees that passes into the render function -- renders the HTML page
