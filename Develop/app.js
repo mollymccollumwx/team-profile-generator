@@ -16,27 +16,41 @@ const { defaultCipherList } = require("constants");
 //array to store employee information from user input
 let employees = [];
 
-
 function employeeRole() {
   inquirer
     .prompt([
       {
         type: "list",
         message: "What is the employee's role?",
-        choices: ["Engineer", "Manager", "Intern"],
+        choices: ["Engineer", "Manager", "Intern", "I'm done!"],
         name: "role",
       },
     ])
-    .then((response) => {
-      switch (response.role){
-        case 'Engineer':
-          createEngineer();
-        case 'Manager':
+    .then((response) => { 
+
+        if (response.role === "Engineer"){
+          createEngineer()
+        } else if(response.role === "Manager"){
           createManager();
-        case 'Intern':
-          createIntern();
-      }
-    });
+        } else {
+          const renderEmployees = render(employees);
+          fs.writeFileSync(outputPath, renderEmployees, 'utf-8');
+        }
+
+    
+      // switch (response.role){
+      //   case "Engineer":
+      //     createEngineer();
+      //   case "Manager":
+      //     createManager();
+      //   // case 'Intern':
+      //   //   createIntern();
+      //   default:
+      //     const renderEmployees = render(employees);
+      //     fs.writeFileSync(outputPath, renderEmployees, 'utf-8');
+
+      });
+    
 }
 
 employeeRole();
@@ -59,27 +73,59 @@ function createEngineer() {
         message: "Please enter the employee's email address?",
         name: "email",
       },
+      {
+        type: "input",
+        message: "What is the employee's Github username?",
+        name: "github",
+      },
     ])
     .then((response) => {
-      console.log(response);
+      const engineer = new Engineer(response.name, response.id, response.email, response.github);
+      employees.push(engineer);
+      console.log(employees);
+      employeeRole();
     });
 }
-// asks specific questions based on what the user choices for role?
-//series of functions (if/else embedded)
-//are you done? array of employees that passes into the render function -- renders the HTML page
-//.then call another function that is defined elsewhere
-//
 
-//
+function createManager() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "What is the employee's name?",
+        name: "name",
+      },
+      {
+        type: "input",
+        message: "What is the employee's ID?",
+        name: "id",
+      },
+      {
+        type: "input",
+        message: "Please enter the employee's email address?",
+        name: "email",
+      },
+      {
+        type: "input",
+        message: "What is the employee's office number?",
+        name: "officeNumber",
+      },
+    ])
+    .then((response) => {
+      const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
+      employees.push(manager);
+      console.log(employees);
+      employeeRole();
+    });
+}
 
-// uses the inquirer package to prompt with questions
-// function init(){
-//     inquirer.prompt(questions).then((response) => {
-//         console.log(response);
-//     })
-// }
 
-// init();
+
+
+
+
+//abstract the final question about more team members
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
