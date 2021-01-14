@@ -5,7 +5,7 @@
 ## Description
 Team Profile Generator is a node.js CLI that takes in information about employees and generates an HTML webpage that displays the information for each person. The user is prompted with a series of questions in the command line using the inquirer package. The user responses are then used to dynamically generate an HTML file. 
 
-![Generated HTML webpage example](./Develop/assets/images/team-generator-html.png)
+![Generated HTML webpage example](./Develop/Assets/images/team-generator-html.png)
 
 This application was created using TDD. You can access these tests in the [Github Repo](https://github.com/mollymccollumwx/team-profile-generator).
 ## Table of Contents
@@ -26,7 +26,7 @@ This application was created using TDD. You can access these tests in the [Githu
 ## Usage
 If you have questions on how to use this application, watch this [walk-through video](https://drive.google.com/file/d/1PHMDee5h-PoGpqyBy2qAkKYg53bYSvpe/view?usp=sharing).
 
-![Command Line Interface](./Develop/assets/images/team-generator-terminal.png)
+![Command Line Interface](./Develop/Assets/images/team-generator-terminal.png)
 
 ## Contributing
 
