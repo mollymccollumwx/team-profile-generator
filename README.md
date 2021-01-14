@@ -3,9 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Team Profile Generator is a NODE CLI that takes in information about employees and generates and HTML webpage that displays the information for each person. The user is prompted with a series of questions in the command line using the inquirer package. The user responses are then used to dynamically generate an HTML file. 
+Team Profile Generator is a NODE CLI that takes in information about employees and generates an HTML webpage that displays the information for each person. The user is prompted with a series of questions in the command line using the inquirer package. The user responses are then used to dynamically generate an HTML file. 
 
-picture of html
+![Generated HTML webpage example](./Develop/assets/images/team-generator-html.png)
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ picture of html
 ## Usage
 If you have questions on how to use this application, watch this [walk-through video]().
 
-picture of terminal 
+![Command Line Interface](./Develop/assets/images/team-generator-terminal.png)
 
 ## Contributing
 
