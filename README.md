@@ -13,7 +13,6 @@ This application was created using TDD. You can access these tests in the [Githu
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Contributing](#Contributing)
-* [Questions](#Questions)
 * [License](#License)
 
 ## Installation
@@ -25,7 +24,7 @@ This application was created using TDD. You can access these tests in the [Githu
 5. Run `node app.js` in your terminal to start the prompts. 
 
 ## Usage
-If you have questions on how to use this application, watch this [walk-through video]().
+If you have questions on how to use this application, watch this [walk-through video](https://drive.google.com/file/d/1PHMDee5h-PoGpqyBy2qAkKYg53bYSvpe/view?usp=sharing).
 
 ![Command Line Interface](./Develop/assets/images/team-generator-terminal.png)
 
