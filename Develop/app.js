@@ -55,18 +55,6 @@ function employeeRole() {
           }
         }
 
-    
-      // switch (response.role){
-      //   case "Engineer":
-      //     createEngineer();
-      //   case "Manager":
-      //     createManager();
-      //   // case 'Intern':
-      //   //   createIntern();
-      //   default:
-      //     const renderEmployees = render(employees);
-      //     fs.writeFileSync(outputPath, renderEmployees, 'utf-8');
-
       });
     
 }
