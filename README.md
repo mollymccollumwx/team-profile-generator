@@ -3,10 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Team Profile Generator is a NODE CLI that takes in information about employees and generates an HTML webpage that displays the information for each person. The user is prompted with a series of questions in the command line using the inquirer package. The user responses are then used to dynamically generate an HTML file. 
+Team Profile Generator is a node.js CLI that takes in information about employees and generates an HTML webpage that displays the information for each person. The user is prompted with a series of questions in the command line using the inquirer package. The user responses are then used to dynamically generate an HTML file. 
 
 ![Generated HTML webpage example](./Develop/assets/images/team-generator-html.png)
 
+This application was created using TDD. You can access these tests in the [Github Repo](https://github.com/mollymccollumwx/team-profile-generator).
 ## Table of Contents
 
 * [Installation](#Installation)
@@ -20,7 +21,8 @@ Team Profile Generator is a NODE CLI that takes in information about employees a
 1. Navigate to the Github repo for the [Team Profile Generator](https://github.com/mollymccollumwx/team-profile-generator) and fork the repository. 
 2. Copy the SSH key in the green "Code" button.
 3. Clone the repo in your terminal.
-4. Run npm install (make sure you have node.js installed first). 
+4. Run `npm install` (make sure you have node.js installed first). 
+5. Run `node app.js` in your terminal to start the prompts. 
 
 ## Usage
 If you have questions on how to use this application, watch this [walk-through video]().
@@ -29,7 +31,7 @@ If you have questions on how to use this application, watch this [walk-through v
 
 ## Contributing
 
-This webpage was created during the Georgia Tech Coding Bootcamp. Thanks to the TA's and classmates that gave advice on approaching and fixing problems in the code.
+This webpage was created during the Georgia Tech Coding Bootcamp. Thanks to the TA's and classmates that gave advice on approaching and fixing problems in the code. 
 
 ## License
 MIT License
