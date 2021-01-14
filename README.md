@@ -15,6 +15,13 @@ picture of html
 * [Questions](#Questions)
 * [License](#License)
 
+## Installation
+
+1. Navigate to the Github repo for the [README Generator](https://github.com/mollymccollumwx/team-profile-generator) and fork the repository. 
+2. Copy the SSH key in the green "Code" button.
+3. Clone the repo in your terminal.
+4. Run npm install (make sure you have node.js installed first). 
+
 ## Usage
 If you have questions on how to use this application, watch this [walk-through video](https://drive.google.com/file/d/1FLHhSCbc-FvRYZzYeX7uUj9zV9RTAsV0/view?usp=sharing).
 
